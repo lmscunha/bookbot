@@ -1,4 +1,11 @@
-with open("./books/frankenstein.txt") as f:
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+book_path = os.environ.get('BOOK_PATH')
+
+with open(book_path) as f:
     file_contents = f.read()
 
 
@@ -35,7 +42,7 @@ def generate_report():
     count_letters_list = list(count_letters_dic.keys())
     count_letters_list.sort()
 
-    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"--- Begin report of {book_path} ---")
 
     print(f"{count_words(file_contents)} words found in the document")
 
