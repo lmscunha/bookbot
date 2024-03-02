@@ -52,7 +52,7 @@ class Bookbot:
 
         for letter in count_letters_list:
             print(
-                f"The {letter} character was found " +
+                f"The '{letter}' character was found " +
                 f"{count_letters_dic[letter]} times")
 
         print("--- End report ---")
